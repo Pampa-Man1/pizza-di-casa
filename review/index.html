@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#c45a3c" />
+  <meta name="description" content="Partagez votre expérience chez Pizza Di Casa à Tournai. Laissez un avis Google en quelques secondes." />
+  <title>Laisser un avis — Pizza Di Casa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="splash-active">
+  <!-- Splash d'ouverture -->
+  <div class="splash" id="splash" aria-hidden="false">
+    <div class="splash__panel">
+      <div class="splash__logo-wrap">
+        <img class="splash__logo" id="splashLogo" src="hero.jpg" alt="Pizza Di Casa" />
+        <p class="splash__brand-name" id="splashBrandName" hidden>Pizza Di Casa</p>
+      </div>
+    </div>
+    <div class="splash__liquid-edge" aria-hidden="true">
+      <svg class="splash__wave splash__wave--1" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,64 C240,120 480,0 720,48 C960,96 1200,24 1440,64 L1440,120 L0,120 Z" fill="currentColor"/>
+      </svg>
+      <svg class="splash__wave splash__wave--2" viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,80 C360,20 720,100 1080,56 C1260,36 1380,72 1440,80 L1440,120 L0,120 Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+
+  <main class="page" id="app">
+    <!-- En-tête avec image -->
+    <header class="hero" id="hero">
+      <div class="hero__image-wrap">
+        <img
+          class="hero__image"
+          id="heroImage"
+          src="hero-nobg.png"
+          alt="Pizza Di Casa"
+        />
+      </div>
+    </header>
+
+    <!-- Carte de contenu -->
+    <div class="content-card">
+      <section class="info-card">
+        <h1 class="info-card__title" id="businessName">Pizza Di Casa</h1>
+        <p class="info-card__subtitle" id="businessSubtitle">
+          Comment s'est passée votre expérience chez Pizza Di Casa ?
+        </p>
+        <a
+          class="social-link"
+          id="socialLink"
+          href="https://facebook.com/profile.php?id=61557667090326"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Suivez-nous sur Facebook</span>
+        </a>
+      </section>
+
+      <form class="feedback-form" id="feedbackForm" novalidate>
+        <div class="stars" id="stars" role="radiogroup" aria-label="Notez votre expérience">
+          <button type="button" class="star" data-value="1" aria-label="1 étoile">★</button>
+          <button type="button" class="star" data-value="2" aria-label="2 étoiles">★</button>
+          <button type="button" class="star" data-value="3" aria-label="3 étoiles">★</button>
+          <button type="button" class="star" data-value="4" aria-label="4 étoiles">★</button>
+          <button type="button" class="star" data-value="5" aria-label="5 étoiles">★</button>
+        </div>
+
+        <label class="comment-label" for="comment">Votre commentaire (optionnel)</label>
+        <div class="comment-wrap">
+          <textarea
+            class="comment-input"
+            id="comment"
+            name="comment"
+            placeholder="Dites-nous ce que vous avez pensé de votre expérience…"
+            maxlength="1000"
+            rows="5"
+          ></textarea>
+          <span class="char-count" id="charCount">0/1000</span>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn" disabled>
+          Envoyer mon avis
+        </button>
+      </form>
+    </div>
+
+    <!-- Overlay de remerciement / redirection -->
+    <div class="overlay" id="overlay" hidden>
+      <div class="overlay__card">
+        <div class="overlay__emoji" id="overlayEmoji">🍕</div>
+        <h2 class="overlay__title" id="overlayTitle">Merci !</h2>
+        <p class="overlay__text" id="overlayText"></p>
+        <button type="button" class="overlay__btn" id="overlayBtn" hidden>
+          Laisser un avis Google
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

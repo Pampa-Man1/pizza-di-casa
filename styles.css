@@ -333,13 +333,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1/1;
   max-height: 560px;
 }
 .hero-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .hero-badge {
   position: absolute;
@@ -560,7 +560,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 }
 .map-container iframe { width: 100%; height: 100%; border: 0; }
 #carte-map { scroll-margin-top: 0; }
-#carte { scroll-margin-top: 4.5rem; }
+#carte { scroll-margin-top: 6rem; }
 
 @media (max-width: 768px) {
   .contact-grid { grid-template-columns: minmax(0, 1fr); }
